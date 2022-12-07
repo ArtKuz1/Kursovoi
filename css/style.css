@@ -1,0 +1,177 @@
+body {
+    background-image: url(../image/fon.jpg);
+}
+.head {
+    width: 1000px;
+    height: 65px;
+
+}
+.com{
+    width: 1000px;
+    height: auto;
+    background: white;
+    color: #070752;
+    margin: 56px auto;
+    border-radius: 10px;
+}
+.poisk {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 10px 10px 230px;
+    border: 1px solid black;
+    border-radius: 50px;
+    float: left;
+}
+.rv{
+    width: 100px;
+    height: 60px;
+    float:right
+}
+.blok {
+    width: 1000px;
+    height: 1000px;
+}
+.osn_blok{
+    width: 790px;
+    height: auto;
+    margin: 5px;
+    float: left;
+}
+.info{
+    width: 788px;
+    height: 265px;
+}
+.blok_info{
+    width: 170px;
+    height: 240px;
+    margin: 10px;
+    float: left;
+    border:3px solid rgba(0,0, 0, 0.2);
+    padding:0;
+}
+.blok_info img{
+    width: 100px;
+    height: 130px;
+    margin: 0 32px;
+}
+.blok_info p{
+    width: 165px;
+    text-align: center;
+
+}
+.dop_blok {
+    width: 185px;
+    height: auto;
+    margin: 5px;
+    float:right;
+}
+.button{
+    width: 300px;
+    height: 50px;
+    margin:10px 148px 0 150px;
+    float: left;
+    border-radius: 50px;
+    color: white;
+    outline: #070752;
+    background: #070752;
+}
+
+.a{
+    margin: 10px;
+    padding: 2px;
+    float: left;
+}
+.a:link{
+    text-decoration: none;
+    color: black;
+}
+.a:visited {
+    text-decoration: none;
+    color: black;
+}
+.a:active {
+    text-decoration: none; }
+.a:hover {
+    text-decoration: none;
+    color: blue;
+}
+.vopr{
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: solid 1px black;
+    float: right;
+    margin: 25px 0 10px ;
+}
+.vopr_text ::before{
+    content:"Введите свое имя";
+}
+footer {
+    height: 20px;
+    background: white;
+}
+footer a{
+    margin:4px;
+}
+footer a:link{
+    text-decoration: none;
+    color: black;
+}
+footer a:visited {
+    text-decoration: none;
+    color: black;
+}
+footer a:active {
+    text-decoration: none; }
+
+input{
+padding:4px 10px;
+border:0;
+}
+input[type=submit]{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+.but_poisk{
+    width: 60px;
+    margin:17px 0;
+    background-color: #234191;
+    color:#ffffff;
+}
+ul#menu, ul#menu ul {
+    list-style-type:none;
+    margin: 0px;
+    padding: 0px;
+    width: 186px;
+}
+.form_ger{
+    margin:0px;
+}
+ul#menu input,ul#menu span { display: block; text-decoration: none; }
+
+ul#menu li { margin-top: 1px; }
+
+ul#menu li input,ul#menu li span {
+    background: #234191;
+    color: #FFFFFF;
+    padding: 7px;
+}
+
+ul#menu li input:hover,ul#menu li span:hover { background: #0c2977; }
+
+ul#menu li ul li input {
+    background: #CCCCCC;
+    color: #000000;
+    padding-left: 20px;
+    
+}
+
+ul#menu li ul li input:hover {
+    background: #AAAAAA;
+    border-left: 5px #0c2977 solid;
+    padding-left: 15px;
+}
+ul#menu li ul li form {
+    margin:1px 0;
+    
+}
