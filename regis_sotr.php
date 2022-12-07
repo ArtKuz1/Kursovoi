@@ -15,35 +15,34 @@ if (isset($_POST['register'])) {
     $email = $_POST['email'];
     $FIO = $_POST['FIO'];
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
-    $query = $conn->prepare("SELECT * FROM User WHERE Login=:login or email=:email");
+    $query = $conn->prepare("SELECT * FROM Sotr WHERE login=:login");
     $query->bindParam("login", $login, PDO::PARAM_STR);
-    $query->bindParam("email", $email, PDO::PARAM_STR);
     $query->execute();
     if ($query->rowCount() > 0) {
         echo '<script>alert("Этот адрес уже зарегистрирован!");</script>';
     }
     if ($query->rowCount() == 0) {
-        $query = $conn->prepare("INSERT INTO User (FIO,email,Login,Password) VALUES (:FIO,:email,:login,:password_hash)");
+        $query = $conn->prepare("INSERT INTO Sotr (FIO,email,login,password,prava_admin) VALUES (:FIO,:email,:login,:password_hash,'нет прав')");
         $query->bindParam("FIO", $FIO, PDO::PARAM_STR);
         $query->bindParam("email", $email, PDO::PARAM_STR);
         $query->bindParam("login", $login, PDO::PARAM_STR);
         $query->bindParam("password_hash", $password_hash, PDO::PARAM_STR);
         $result = $query->execute();
         if ($result) {
-            echo '<script>alert("Регистрация прошла успешно!");</script>';
-            header("Location: avto.php");
+            echo '<p class="success">Регистрация прошла успешно!</p>';
+            header("Location: http://localhost:8088/avto.php");
         } else {
-            echo '<script>alert("Неверные данные!");</script>';
+            echo '<p class="error">Неверные данные!</p>';
         }
     }
 }
 ?>
+
 <form class="form_rv" method="post" action="" name="signup-form">
     <h1 class="h1_1">Регистрация</h1>
     <div class="form_el1">
         <label>ФИО</label>
         <input class="form_el" type="text" name="FIO" required />
-        <div class="vopr"><p class="vopr_text"></p></div>
     </div>
     <div class="form_el1">
         <label>Email</label>
